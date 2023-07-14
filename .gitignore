@@ -1,0 +1,12 @@
+_build
+_tracks
+
+*.DS_STORE
+._*
+
+.DS_STORE
+*.dump
+*.api
+*.api-txt
+
+*.log
