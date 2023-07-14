@@ -1,0 +1,972 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 241
+  HorizontalOffset = 1418
+  VerticalOffset = 94
+  Width = 1069
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Port = 3050
+    Database = 'BANCODADOS'
+    User = '#ghdftyri$%%ffd764509'
+    Password = 
+    Protocol = 
+    Left = 32
+    Top = 24
+  end
+  object TCliente: TZTable
+    Connection = ZConnection1
+    TableName = 'CLIENTES'
+    Left = 128
+    Top = 24
+    object TClienteCHAVE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = True
+    end
+    object TClienteNOME: TStringField
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TClienteTIPO_PESSOA: TStringField
+      FieldKind = fkData
+      FieldName = 'TIPO_PESSOA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object TClienteSEXO: TStringField
+      FieldKind = fkData
+      FieldName = 'SEXO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TClienteATIVO: TStringField
+      FieldKind = fkData
+      FieldName = 'ATIVO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object TClienteCPF_CNPJ: TStringField
+      FieldKind = fkData
+      FieldName = 'CPF_CNPJ'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TClienteRG_IE: TStringField
+      FieldKind = fkData
+      FieldName = 'RG_IE'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TClienteCEP: TStringField
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object TClienteLOGRADOURO: TStringField
+      FieldKind = fkData
+      FieldName = 'LOGRADOURO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TClienteNUMERO: TStringField
+      FieldKind = fkData
+      FieldName = 'NUMERO'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object TClienteCOMPLEMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'COMPLEMENTO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object TClienteBAIRRO: TStringField
+      FieldKind = fkData
+      FieldName = 'BAIRRO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 85
+    end
+    object TClienteCIDADE: TStringField
+      FieldKind = fkData
+      FieldName = 'CIDADE'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 85
+    end
+    object TClienteUF: TStringField
+      FieldKind = fkData
+      FieldName = 'UF'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object TClienteTELEFONE_1: TStringField
+      FieldKind = fkData
+      FieldName = 'TELEFONE_1'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TClienteTELEFONE_2: TStringField
+      FieldKind = fkData
+      FieldName = 'TELEFONE_2'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TClienteEMAIL: TStringField
+      FieldKind = fkData
+      FieldName = 'EMAIL'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TClienteOBSERVACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'OBSERVACAO'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+  end
+  object DSCliente: TDataSource
+    DataSet = TCliente
+    Left = 128
+    Top = 91
+  end
+  object TProduto: TZTable
+    Connection = ZConnection1
+    TableName = 'PRODUTOS'
+    Left = 230
+    Top = 24
+    object TProdutoCHAVE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = True
+    end
+    object TProdutoCODIGOBARRAS: TStringField
+      FieldKind = fkData
+      FieldName = 'CODIGOBARRAS'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object TProdutoDESCRICAO: TStringField
+      FieldKind = fkData
+      FieldName = 'DESCRICAO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TProdutoUNIDADE: TStringField
+      FieldKind = fkData
+      FieldName = 'UNIDADE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object TProdutoPRECO_COMPRA: TFloatField
+      FieldKind = fkData
+      FieldName = 'PRECO_COMPRA'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########.##'
+      EditFormat = '##########.##'
+      Precision = 2
+    end
+    object TProdutoPRECO_VENDA: TFloatField
+      FieldKind = fkData
+      FieldName = 'PRECO_VENDA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########.##'
+      EditFormat = '##########.##'
+      Precision = 2
+    end
+    object TProdutoESTOQUE: TFloatField
+      FieldKind = fkData
+      FieldName = 'ESTOQUE'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########,###'
+      EditFormat = '##########,###'
+      Precision = 2
+    end
+    object TProdutoOBSERVACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'OBSERVACAO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object TProdutoCHAVE_FORNECEDOR: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_FORNECEDOR'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOME'
+      Index = 9
+      KeyFields = 'CHAVE_FORNECEDOR'
+      LookupCache = False
+      LookupDataSet = TFornecedores
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'NOME'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+  end
+  object DSProduto: TDataSource
+    DataSet = TProduto
+    Left = 230
+    Top = 91
+  end
+  object TVenda: TZTable
+    Connection = ZConnection1
+    TableName = 'VENDAS'
+    Left = 336
+    Top = 24
+    object TVendaCHAVE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = True
+    end
+    object TVendaNUMERO: TLongintField
+      FieldKind = fkData
+      FieldName = 'NUMERO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TVendaCHAVE_CLIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_CLIENTE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TVendaDATA: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      EditMask = '99/99/9999'
+    end
+    object TVendaHORARIO: TTimeField
+      FieldKind = fkData
+      FieldName = 'HORARIO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      EditMask = '99:99:99'
+    end
+    object TVendaVALOR_TOTAL: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR_TOTAL'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########.##'
+      EditFormat = '##########.##'
+      Precision = 2
+    end
+    object TVendaVALOR_PAGO_ENTRADA: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR_PAGO_ENTRADA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########.##'
+      EditFormat = '##########.##'
+      Precision = 2
+    end
+    object TVendaQUANTIDADE_PARCELAS: TLongintField
+      FieldKind = fkData
+      FieldName = 'QUANTIDADE_PARCELAS'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TVendaDIA_DO_MES_PRA_VENCER: TLongintField
+      FieldKind = fkData
+      FieldName = 'DIA_DO_MES_PRA_VENCER'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOME'
+      Index = 9
+      KeyFields = 'CHAVE_CLIENTE'
+      LookupCache = False
+      LookupDataSet = TCliente
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'NOME'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TVendaFORM_PGTO_VISTA: TStringField
+      FieldKind = fkData
+      FieldName = 'FORM_PGTO_VISTA'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 300
+    end
+  end
+  object TItemVenda: TZTable
+    Connection = ZConnection1
+    TableName = 'ITEM_VENDAS'
+    MasterFields = 'CHAVE'
+    MasterSource = DSVenda
+    LinkedFields = 'CHAVE_VENDA'
+    Left = 429
+    Top = 24
+    object TItemVendaCHAVE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = True
+    end
+    object TItemVendaCHAVE_VENDA: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_VENDA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TItemVendaCHAVE_PRODUTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_PRODUTO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TItemVendaPRECO_UNITARIO: TFloatField
+      FieldKind = fkData
+      FieldName = 'PRECO_UNITARIO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########.##'
+      EditFormat = '##########.##'
+      Precision = 2
+    end
+    object TItemVendaQUANTIDADE: TFloatField
+      FieldKind = fkData
+      FieldName = 'QUANTIDADE'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########,###'
+      EditFormat = '##########,###'
+      Precision = 2
+    end
+    object TItemVendaVALOR_TOTAL: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR_TOTAL'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########.##'
+      EditFormat = '##########.##'
+      Precision = 2
+    end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'DESCRICAO'
+      Index = 6
+      KeyFields = 'CHAVE_PRODUTO'
+      LookupCache = False
+      LookupDataSet = TProduto
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'DESCRICAO'
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+  end
+  object TContaAReceber: TZTable
+    Connection = ZConnection1
+    TableName = 'CONTA_A_RECEBER'
+    MasterFields = 'CHAVE'
+    MasterSource = DSVenda
+    LinkedFields = 'CHAVE_VENDA'
+    Left = 537
+    Top = 24
+    object TContaAReceberCHAVE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = True
+    end
+    object TContaAReceberCHAVE_VENDA: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_VENDA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TContaAReceberCHAVE_CLIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_CLIENTE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TContaAReceberVALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '##########.##'
+      EditFormat = '##########.##'
+      Precision = 2
+    end
+    object TContaAReceberDATA_VENCIMENTO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_VENCIMENTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      EditMask = '99/99/9999'
+    end
+    object TContaAReceberDATA_PAGAMEMTO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_PAGAMEMTO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      EditMask = '99/99/9999'
+    end
+    object TContaAReceberSTATUS: TStringField
+      FieldKind = fkData
+      FieldName = 'STATUS'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TContaAReceberFORMA_PAGTO: TStringField
+      FieldKind = fkData
+      FieldName = 'FORMA_PAGTO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOME'
+      Index = 8
+      KeyFields = 'CHAVE_CLIENTE'
+      LookupCache = False
+      LookupDataSet = TCliente
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'NOME'
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+  end
+  object DSVenda: TDataSource
+    DataSet = TVenda
+    Left = 336
+    Top = 96
+  end
+  object DSItemVenda: TDataSource
+    DataSet = TItemVenda
+    Left = 429
+    Top = 91
+  end
+  object DSContaAReceber: TDataSource
+    DataSet = TContaAReceber
+    Left = 537
+    Top = 91
+  end
+  object TFornecedores: TZTable
+    Connection = ZConnection1
+    TableName = 'FORNECEDORES'
+    Left = 652
+    Top = 26
+    object TFornecedoresCHAVE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = True
+    end
+    object TFornecedoresCHAVE_PRODUTO: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_PRODUTO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TFornecedoresNOME: TStringField
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TFornecedoresRAZAO_SOCIAL: TStringField
+      FieldKind = fkData
+      FieldName = 'RAZAO_SOCIAL'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TFornecedoresTIPO_PESSOA: TStringField
+      FieldKind = fkData
+      FieldName = 'TIPO_PESSOA'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object TFornecedoresCPF_CNPJ: TStringField
+      FieldKind = fkData
+      FieldName = 'CPF_CNPJ'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TFornecedoresLOGRADOURO: TStringField
+      FieldKind = fkData
+      FieldName = 'LOGRADOURO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TFornecedoresNUMERO: TStringField
+      FieldKind = fkData
+      FieldName = 'NUMERO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object TFornecedoresCOMPLEMENTO: TStringField
+      FieldKind = fkData
+      FieldName = 'COMPLEMENTO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object TFornecedoresBAIRRO: TStringField
+      FieldKind = fkData
+      FieldName = 'BAIRRO'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TFornecedoresCIDADE: TStringField
+      FieldKind = fkData
+      FieldName = 'CIDADE'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+    object TFornecedoresUF: TStringField
+      FieldKind = fkData
+      FieldName = 'UF'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object TFornecedoresCEP: TStringField
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object TFornecedoresTELEFONE_1: TStringField
+      FieldKind = fkData
+      FieldName = 'TELEFONE_1'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TFornecedoresTELEFONE_2: TStringField
+      FieldKind = fkData
+      FieldName = 'TELEFONE_2'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TFornecedoresEMAIL: TStringField
+      FieldKind = fkData
+      FieldName = 'EMAIL'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object TFornecedoresSITE: TStringField
+      FieldKind = fkData
+      FieldName = 'SITE'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object TFornecedoresOBSERVACAO: TStringField
+      FieldKind = fkData
+      FieldName = 'OBSERVACAO'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 500
+    end
+  end
+  object DSFornecedores: TDataSource
+    DataSet = TFornecedores
+    Left = 652
+    Top = 96
+  end
+end
+
+
+
+-------------------------
+
+
+
+unit udatamodule1;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, DB, ZConnection, ZDataset;
+
+type
+
+  { TDataModule1 }
+
+  TDataModule1 = class(TDataModule)
+    DSCliente: TDataSource;
+    DSFornecedores: TDataSource;
+    DSContaAReceber: TDataSource;
+    DSItemVenda: TDataSource;
+    DSProduto: TDataSource;
+    DSVenda: TDataSource;
+    TFornecedores: TZTable;
+    TClienteATIVO: TStringField;
+    TClienteBAIRRO: TStringField;
+    TClienteCEP: TStringField;
+    TClienteCHAVE: TLongintField;
+    TClienteCIDADE: TStringField;
+    TClienteCOMPLEMENTO: TStringField;
+    TClienteCPF_CNPJ: TStringField;
+    TClienteEMAIL: TStringField;
+    TClienteLOGRADOURO: TStringField;
+    TClienteNOME: TStringField;
+    TClienteNUMERO: TStringField;
+    TClienteOBSERVACAO: TStringField;
+    TClienteRG_IE: TStringField;
+    TClienteSEXO: TStringField;
+    TClienteTELEFONE_1: TStringField;
+    TClienteTELEFONE_2: TStringField;
+    TClienteTIPO_PESSOA: TStringField;
+    TClienteUF: TStringField;
+    TContaAReceber: TZTable;
+    TContaAReceberCHAVE: TLongintField;
+    TContaAReceberCHAVE_CLIENTE: TLongintField;
+    TContaAReceberCHAVE_VENDA: TLongintField;
+    TContaAReceberDATA_PAGAMEMTO: TDateField;
+    TContaAReceberDATA_VENCIMENTO: TDateField;
+    TContaAReceberFORMA_PAGTO: TStringField;
+    TContaAReceberSTATUS: TStringField;
+    TContaAReceberVALOR: TFloatField;
+    TFornecedoresBAIRRO: TStringField;
+    TFornecedoresCEP: TStringField;
+    TFornecedoresCHAVE: TLongintField;
+    TFornecedoresCHAVE_PRODUTO: TLongintField;
+    TFornecedoresCIDADE: TStringField;
+    TFornecedoresCOMPLEMENTO: TStringField;
+    TFornecedoresCPF_CNPJ: TStringField;
+    TFornecedoresEMAIL: TStringField;
+    TFornecedoresLOGRADOURO: TStringField;
+    TFornecedoresNOME: TStringField;
+    TFornecedoresNUMERO: TStringField;
+    TFornecedoresOBSERVACAO: TStringField;
+    TFornecedoresRAZAO_SOCIAL: TStringField;
+    TFornecedoresSITE: TStringField;
+    TFornecedoresTELEFONE_1: TStringField;
+    TFornecedoresTELEFONE_2: TStringField;
+    TFornecedoresTIPO_PESSOA: TStringField;
+    TFornecedoresUF: TStringField;
+    TItemVenda: TZTable;
+    TItemVendaCHAVE: TLongintField;
+    TItemVendaCHAVE_PRODUTO: TLongintField;
+    TItemVendaCHAVE_VENDA: TLongintField;
+    TItemVendaPRECO_UNITARIO: TFloatField;
+    TItemVendaQUANTIDADE: TFloatField;
+    TItemVendaVALOR_TOTAL: TFloatField;
+    TProduto: TZTable;
+    TProdutoCHAVE: TLongintField;
+    TProdutoCHAVE_FORNECEDOR: TLongintField;
+    TProdutoCODIGOBARRAS: TStringField;
+    TProdutoDESCRICAO: TStringField;
+    TProdutoESTOQUE: TFloatField;
+    TProdutoOBSERVACAO: TStringField;
+    TProdutoPRECO_COMPRA: TFloatField;
+    TProdutoPRECO_VENDA: TFloatField;
+    TProdutoUNIDADE: TStringField;
+    TVenda: TZTable;
+    TVendaCHAVE: TLongintField;
+    TVendaCHAVE_CLIENTE: TLongintField;
+    TVendaDATA: TDateField;
+    TVendaDIA_DO_MES_PRA_VENCER: TLongintField;
+    TVendaFORM_PGTO_VISTA: TStringField;
+    TVendaHORARIO: TTimeField;
+    TVendaNUMERO: TLongintField;
+    TVendaQUANTIDADE_PARCELAS: TLongintField;
+    TVendaVALOR_PAGO_ENTRADA: TFloatField;
+    TVendaVALOR_TOTAL: TFloatField;
+    ZConnection1: TZConnection;
+    TCliente: TZTable;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+
+  public
+
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{$R *.lfm}
+
+{ TDataModule1 }
+
+procedure TDataModule1.DataModuleCreate(Sender: TObject);
+begin
+
+  ZConnection1.Database:= 'BANCODADOS.FDB';
+  ZConnection1.Connected:= True;
+end;
+
+end.
+
+
