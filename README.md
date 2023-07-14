@@ -1,9 +1,18 @@
 # ComercialBasico
+
+Aplicativos disponíveis com código aberto - www.ia.seg.br
+
+Olá, obrigado pelo interesse.
+
+Comercial Básico é um software de código aberto, livre e gratuito.
+
+Clique em "Release" para baixar o software de acordo com o sistema operacional que está sendo utilizado em seu computador. Depois de fazer o download, basta clicar duas vezes no arquivo baixado e seguir as instruções em tela. No MacOs pode ser necessário autorizar a execução de software de origem desconhecida em Ajustes do Sistema -> Privacidade e Segurança -> Segurança.
+
 Esta aplicação é para você que está trabalhando com vendas ou vai iniciar um comércio e precisa de um banco de dados em seu computador.
-
 Comercial Básico é um aplicativo leve, capaz de rodar em qualquer computador, sem requesitos adicionais.
+Nosso objetivo é oferecer uma solução básica, com uma interface limpa e viável para uso em telas sensíveis ao toque, para você gerir algumas das rotinas de uma pequena empresa ou de seu trabalho com vendas.
 
-Clique em "Release" para baixar o software de acordo com o sistema operacional que está sendo utilizado em seu computador. Depois de fazer o download, basta clicar duas vezes no arquivo baixado e seguir as instruções em tela. No Mac Os pode ser necessário autorizar a execução de software de origem desconhecida em Ajustes do Sistema -> Privacidade e Segurança -> Segurança.
+Acreditamos que o conhecimento, assim como o software, não possui barreiras ou limitações. Aqui no github você vai encontrar o código fonte desta aplicação. Assim qualquer pessoa com o devido conhecimento tem a liberdade para fazer a alteração que desejar.
 
 Para os desenvolvedores que desejarem reutilizar este código em suas próprias soluções, pedimos apenas a gentileza de citar "by Guilherme - www.ia.seg.br" como origem de parte do código da aplicação derivada. Espero, sinceramente, que o esforço no desenvolvimento deste código ajude você a obter sucesso em sua vida profissional e pessoal.
 
