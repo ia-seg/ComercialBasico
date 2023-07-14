@@ -1,4 +1,4 @@
-# ComercialBasico
+# Comercial Básico
 
 Aplicativos disponíveis com código aberto - www.ia.seg.br
 
