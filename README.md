@@ -1,3 +1,4 @@
+![Logo do R](https://www.ia.seg.br/assets/img/comercialBasico_256.png)
 # Comercial Básico
 
 Aplicativos disponíveis com código aberto - www.ia.seg.br
